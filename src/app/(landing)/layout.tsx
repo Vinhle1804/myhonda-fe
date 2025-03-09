@@ -7,9 +7,9 @@ export default function LandingLayout({
 }>) {
   return (
     <main>
-  <div className="pb-[110px]">
-            <Header />
-          </div>
+      <div className="pb-[110px]">
+        <Header />
+      </div>
       {children}
     </main>
   );

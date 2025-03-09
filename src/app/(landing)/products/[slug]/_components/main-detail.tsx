@@ -36,9 +36,12 @@ function MainDetailPage({ slug }: { slug: string }) {
   const scrollToElement = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      const offset = 174; // Khoảng cách muốn giữ lại phía trên
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY; 
+      window.scrollTo({ top: elementPosition - offset, behavior: "smooth" });
     }
   };
+  
 
   const getColorClass = (color: string) => {
     if (!color || !(color in Color)) {
@@ -80,7 +83,7 @@ function MainDetailPage({ slug }: { slug: string }) {
       <div>
         <div
           id="menu"
-          className="space-y-4 h-16 w-full flex bg-white items-center "
+          className="space-y-4 h-16 w-full p-2 flex bg-white items-center sticky top-[113px]"
         >
           <div className="flex justify-start w-[230px]">
             <select

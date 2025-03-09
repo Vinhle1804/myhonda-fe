@@ -19,15 +19,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange
-      >
-        <body className={`${inter.variable}  antialiased`}>{children}</body>
-      </ThemeProvider>
-    </html>
+    <>
+      <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} antialiased`}>
+
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </>
   );
 }
