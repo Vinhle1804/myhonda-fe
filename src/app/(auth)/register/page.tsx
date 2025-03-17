@@ -1,9 +1,10 @@
-
+import RegisterForm from "./registerForm"
 
 export default function RegisterPage() {
     return (
       <div>
-        Register
+        RegisterPage
+        <RegisterForm/>
       </div>
     )
   }

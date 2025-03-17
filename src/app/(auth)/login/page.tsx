@@ -1,9 +1,11 @@
+import LoginForm from "./loginForm";
 
 
 export default function LoginPage() {
   return (
     <div>
-      Login
+      LoginPage
+      <LoginForm/>
     </div>
   )
 }
